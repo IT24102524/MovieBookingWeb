@@ -1,0 +1,10 @@
+Booking Confirmation
+Booking ID: 2f641b2d-ccb2-4010-8eed-fecaaca18c95
+Movie ID: 003
+Date: 1111-11-11
+Showtime: 01:30
+Seats: J4, J5
+Food Items: popcorn, coke
+Total Price: $4950.0
+Thank you for booking! Please pay at the theater.
+

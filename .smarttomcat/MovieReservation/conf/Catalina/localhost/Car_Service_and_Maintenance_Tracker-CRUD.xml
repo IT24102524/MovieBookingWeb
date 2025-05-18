@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Context docBase="F:\SLIIT\Y1S2\OOP\Car_Service_and_Maintenance_Tracker-CRUD\src\main\webapp">
+  <Resources cacheMaxSize="10240">
+    <PreResources base="F:/SLIIT/Y1S2/OOP/Car_Service_and_Maintenance_Tracker-CRUD/out/production/Car_Service_and_Maintenance_Tracker-CRUD" className="org.apache.catalina.webresources.DirResourceSet" webAppMount="/WEB-INF/classes"/>
+    <PostResources base="C:/Users/MSI SWORD/Downloads/javax.servlet-api-3.1.0.jar" className="org.apache.catalina.webresources.FileResourceSet" webAppMount="/WEB-INF/lib/javax.servlet-api-3.1.0.jar"/>
+    <PostResources base="F:/SLIIT/Y1S2/OOP/Car_Service_and_Maintenance_Tracker-CRUD/src/main/libraries/jakarta.servlet-api-5.0.0.jar" className="org.apache.catalina.webresources.FileResourceSet" webAppMount="/WEB-INF/lib/jakarta.servlet-api-5.0.0.jar"/>
+  </Resources>
+</Context>

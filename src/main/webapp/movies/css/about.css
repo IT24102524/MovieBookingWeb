@@ -1,0 +1,206 @@
+/*
+Template Name: Movie Theme
+File: Layout CSS
+Author: TemplatesOnWeb
+Author URI: https://www.templateonweb.com/
+Licence: <a href="https://www.templateonweb.com/license">Website Template Licence</a>
+*/
+
+/*********************about****************/
+.about_pg1l2 h1{
+ line-height:0.5em;
+ width:150px;
+ height:150px;
+ padding-top:35px;
+ }
+.about_pg1l3 span a{
+width:70px;
+height:70px;
+line-height:65px; 
+transition: 0.3s;
+ }
+.about_pg1l3 span a:hover{
+background:#fff!important;
+color:#000!important;
+ }
+ 
+.spec_m{
+padding-top:100px;
+padding-bottom:170px; 
+ }
+#spec{
+background-image: url(../img/3.jpg);
+}
+.spec_o1{
+border-bottom:5px solid #d96c2c;  
+ }
+.spec_main2{
+bottom:-150px; 
+ }
+.spec_main{
+margin-bottom:150px; 
+ }
+.team_1i img:hover{
+transition: 0.3s;
+opacity:0.9; 
+ }
+.testim_1rn1{
+padding-top:200px; 
+ }
+.testim_1rn3{
+padding-top:30%; 
+ }
+.testim_1rn4{
+padding-top:70%; 
+ }
+
+.team_1im2{
+border-right:10px solid #d96c2c; 
+border-bottom:10px solid #d96c2c;
+width:184px;
+height:184px;
+top:64%;
+left:50%;
+ }
+.team_1im1 img{
+width:95%; 
+ }
+.team_1i1{
+ margin-top:40px;
+ }
+/*********************about_end****************/
+
+
+@media screen and (max-width : 767px){
+.about_pg1r{
+margin-top:15px;
+text-align:center; 
+ }
+.about_pg1r p{
+text-align:left; 
+ }
+.about_pg1rir{
+margin-top:10px; 
+ }
+.spec_m {
+padding-top: 100px;
+padding-bottom: 100px;
+}
+.spec_o1l {
+padding-bottom:15px!important; 
+ }
+.spec_main {
+margin-bottom:0;
+}
+.team_1i1l{
+margin-bottom:15px;
+text-align:center; 
+ }
+.team_1i1r{
+text-align:center!important; 
+ }
+.team_1i{
+margin-top:8px;
+margin-bottom:8px; 
+ }
+.testim_1rn1 {
+position:static!important; 
+padding-top:50px;
+ }
+.testim_1rn1 img{
+width:100%;
+ }
+.testim_1rn2 {
+display:none; 
+ }
+.testim_1rn3 {
+display:none;
+ }
+.testim_1rn4 {
+display:none;
+ }
+.team_1im2{
+display:none;
+ }
+.team_1im1 img{
+width:100%; 
+ }
+.team_1i1{
+ margin-top:15px;
+ }
+ }
+
+
+@media (min-width:576px) and (max-width:767px) {
+
+ }
+ 
+@media (min-width:768px) and (max-width:991px) {
+.about_pg1ril span{
+font-size:45px; 
+ }
+.spec_o1lil  span{
+font-size:30px;  
+ }
+.spec_o1lir  .font_50{
+font-size:30px;  
+ }
+.spec_o1lir  h6{
+font-size:12px;  
+ }
+.team_1i1l h5{
+font-size:13px;  
+ }
+.team_1i1l h6{
+font-size:11px;  
+ }
+.team_1i1r .social_icon{
+width:25px;
+height:25px;
+line-height:25px;
+font-size:12px;  
+ }
+ 
+.team_1im2{
+display:none;
+ }
+.team_1im1 img{
+width:100%; 
+ }
+.team_1i1{
+ margin-top:15px;
+ }
+ }
+
+@media (min-width:992px) and (max-width:1200px) {
+.spec_o1lil  span{
+font-size:40px;  
+ }
+.spec_o1lir  .font_50{
+font-size:40px;  
+ }
+.team_1i1r .social_icon{
+width:35px;
+height:35px;
+line-height:35px;
+font-size:14px;  
+ }
+.team_1im2{
+display:none;
+ }
+.team_1im1 img{
+width:100%; 
+ }
+.team_1i1{
+ margin-top:15px;
+ }
+ }
+@media (min-width:1400px) and (max-width:1700px) {
+.team_1im2{
+top:69%;
+left:56%;
+ }
+ }
+
+
+

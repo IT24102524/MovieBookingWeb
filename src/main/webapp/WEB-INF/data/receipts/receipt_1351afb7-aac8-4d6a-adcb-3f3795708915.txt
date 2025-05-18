@@ -1,0 +1,10 @@
+Booking Confirmation
+Booking ID: 47e30323-fe88-4cc2-bd8b-b77fd4f0b701
+Movie ID: 004
+Date: 2025-12-12
+Showtime: 01:01
+Seats: J1, J2
+Food Items: popcorn, nachos
+Total Price: $3300.0
+Thank you for booking! Please pay at the theater.
+

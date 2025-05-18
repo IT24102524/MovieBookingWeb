@@ -1,0 +1,58 @@
+package main.java.com.movieticket.dao;
+
+import main.java.com.movieticket.model.Review;
+
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
+
+public class ReviewDAO {
+
+    private static final String DATA_FILE = "C:\\Users\\Napoleon\\Desktop\\Project\\MovieBookingPlatform\\src\\main\\data/reviews.txt";
+    private static final String DELIMITER = "\\|";
+
+    public List<Review> getReviewsByMovieId(String movieId) {
+        List<Review> reviews = new ArrayList<>();
+        try (BufferedReader br = new BufferedReader(new FileReader(DATA_FILE))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] fields = line.split(DELIMITER);
+                if (fields.length == 6 && fields[1].equals(movieId)) {
+                    Review review = new Review(
+                            fields[0], // reviewId
+                            fields[1], // movieId
+                            fields[2], // userId
+                            fields[3], // username
+                            Integer.parseInt(fields[4]), // rating
+                            fields[5] // comment
+                    );
+                    reviews.add(review);
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return reviews;
+    }
+
+    public boolean addReview(Review review) {
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(DATA_FILE, true))) {
+            bw.write(formatReview(review));
+            bw.newLine();
+            return true;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    private String formatReview(Review review) {
+        return review.getReviewId() + "|" +
+                review.getMovieId() + "|" +
+                review.getUserId() + "|" +
+                review.getUsername() + "|" +
+                review.getRating() + "|" +
+                review.getComment();
+    }
+}

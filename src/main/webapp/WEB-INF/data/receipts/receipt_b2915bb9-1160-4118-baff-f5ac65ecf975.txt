@@ -1,0 +1,10 @@
+Booking Confirmation
+Booking ID: 04fa9cae-b8ef-452b-856a-e4df9179214d
+Movie ID: 003
+Date: 2025-12-11
+Showtime: 06:35
+Seats: I2, I3
+Food Items: coke
+Total Price: $4350.0
+Thank you for booking! Please pay at the theater.
+

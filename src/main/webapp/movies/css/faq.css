@@ -1,0 +1,76 @@
+/*
+Template Name: Constituent Bazar
+File: Layout CSS
+Author: TemplatesOnWeb
+Author URI: https://www.templateonweb.com/
+Licence: <a href="https://www.templateonweb.com/license">Website Template Licence</a>
+*/
+
+/*********************faq****************/
+.faq_1l1 ul {
+display:block; 
+ }
+.faq_1l1 ul li{
+display:block; 
+ }
+.faq_1l1 ul li a{
+color:#333;
+font-weight:bold;
+border:none!important;
+ }
+.faq_1l1 ul li a:hover{
+border:none;
+color:#d96c2c;
+ }
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+border:none;
+color:#fff;
+background:#d96c2c;
+}
+/*********************faq_end****************/
+
+
+
+@media screen and (max-width : 767px){
+.faq_1l2 {
+text-align:center; 
+ }
+.faq_1l2 .text-end{
+text-align:center!important; 
+ }
+.faq_1l2 p{
+text-align:left; 
+ }
+.faq_1r{
+margin-top:15px; 
+  }
+.faq_1r h5{
+text-align:center;
+  }
+  
+.price_1i1{
+margin-top:8px;
+margin-bottom:8px;
+text-align:center;  
+  }
+ }
+
+@media (min-width:576px) and (max-width:767px) {
+
+ }
+@media (min-width:768px) and (max-width:991px) {
+.faq_1l2  .button{
+padding:10px 15px!important; 
+ }
+ }
+
+@media (min-width:992px) and (max-width:1200px) {
+
+ }
+@media (min-width:1201px) and (max-width:1360px) {
+
+ }
+
+
+

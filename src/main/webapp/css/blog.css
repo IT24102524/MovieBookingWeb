@@ -1,0 +1,104 @@
+/*
+Template Name: Movie Theme
+File: Layout CSS
+Author: TemplatesOnWeb
+Author URI: https://www.templateonweb.com/
+Licence: <a href="https://www.templateonweb.com/license">Website Template Licence</a>
+*/
+
+/*********************blog****************/
+.blog_1r1 ::placeholder {
+color: #fff;
+opacity: 1; /* Firefox */
+}
+.tags li a {
+font-size: 15px;
+padding: 9px 15px 9px 15px;
+background: #ffeaea;
+margin: 0px 5px 10px 0px;
+color: #333;
+display: block;
+}
+.tags li a:hover {
+background: #d96c2c!important;
+color: #fff;
+}
+.tags1 li a{
+background:#ffeaea; 
+ }
+ 
+.contact_1i{
+min-height:215px;
+transition: 0.3s; 
+border:2px solid transparent;
+ }
+.contact_1i:hover{
+border:2px solid #d96c2c;
+ }
+/*********************blog_end****************/
+
+
+@media screen and (max-width : 767px){
+.blog_1l1 img{
+height:auto; 
+ }
+.blog_1r{
+margin-top:15px; 
+ }
+.blog_1r2  h4{
+text-align:center; 
+ }
+.blog_1dt2il{
+text-align:center;  
+ }
+.blog_1dt2ir{
+text-align:center!important;
+margin-top:15px;  
+ }
+.blog_1dt3 h3{
+text-align:center; 
+ }
+.blog_1dt4 h3{
+text-align:center; 
+ }
+.blog_1dt5 h3{
+text-align:center; 
+ }
+.blog_1dt5il{
+margin-top:10px; 
+ }
+.login_1m  {
+width:100%!important; 
+ }
+.contact_1i {
+text-align:center;
+margin-top:8px;
+margin-bottom:8px; 
+ }
+.contact_1i p{
+text-align:left;
+ }
+ }
+
+
+@media (min-width:576px) and (max-width:767px) {
+.contact_1i p{
+text-align:center;
+ }
+ }
+ 
+@media (min-width:768px) and (max-width:991px) {
+.contact_1i1r .font_50{
+font-size:30px; 
+ }
+ }
+
+@media (min-width:992px) and (max-width:1200px) {
+
+ }
+@media (min-width:1201px) and (max-width:1350px) {
+
+ }
+
+
+

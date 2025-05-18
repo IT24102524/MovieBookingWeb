@@ -1,0 +1,10 @@
+Booking Confirmation
+Booking ID: 55e3635e-a666-4992-8649-637b83ed4957
+Movie ID: 003
+Date: 1111-11-11
+Showtime: 01:30
+Seats: J2, J1
+Food Items: nachos
+Total Price: $4007.0
+Thank you for booking! Please pay at the theater.
+

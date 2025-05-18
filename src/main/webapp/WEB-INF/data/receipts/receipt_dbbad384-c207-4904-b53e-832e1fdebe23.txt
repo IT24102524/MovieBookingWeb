@@ -1,0 +1,9 @@
+Booking Confirmation
+Booking ID: c616ed84-1ee2-4a10-8fd4-3250d25caa17
+Movie ID: 003
+Date: 1111-11-11
+Showtime: 01:30
+Seats: J4, J5
+Total Price: $4000.0
+Thank you for booking! Please pay at the theater.
+

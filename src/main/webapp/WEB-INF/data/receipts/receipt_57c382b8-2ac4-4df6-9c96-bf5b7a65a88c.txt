@@ -1,0 +1,10 @@
+Booking Confirmation
+Booking ID: 00e20e7d-e2a7-4b3e-b0b1-b045a7c4fb67
+Movie ID: 003
+Date: 1111-11-11
+Showtime: 01:30
+Seats: J1
+Food Items: coke, nachos
+Total Price: $2010.0
+Thank you for booking! Please pay at the theater.
+
