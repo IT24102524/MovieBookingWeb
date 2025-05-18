@@ -85,4 +85,7 @@ public class BookingDAO {
         return null;
     }
 
+    private int newMeth(){
+        return -1;
+    }
 }
