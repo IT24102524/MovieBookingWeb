@@ -5,6 +5,9 @@ import javax.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
 import main.java.com.movieticket.dao.MovieDAO;
 import main.java.com.movieticket.model.Movie;
+import main.java.com.movieticket.model.Booking;
+import main.java.com.movieticket.queue.BookingQueue;
+import main.java.com.movieticket.queue.BookingProcessor;
 
 import java.io.*;
 import java.time.LocalDateTime;
@@ -15,6 +18,32 @@ public class BookingServlet extends HttpServlet {
 
     // Absolute path to bookings file — update as per your environment
     private static final String BOOKINGS_FILE = "/Users/mohamedrazeen/IdeaProjects/MovieTicketReservation/src/main/data/bookings.txt";
+
+    // BookingQueue instance for handling booking requests
+    private BookingQueue bookingQueue;
+    // BookingProcessor instance for processing booking requests
+    private BookingProcessor bookingProcessor;
+
+    @Override
+    public void init() throws ServletException {
+        super.init();
+        // Initialize the booking queue and processor
+        bookingQueue = BookingQueue.getInstance();
+        bookingProcessor = BookingProcessor.getInstance();
+        // Start the booking processor
+        bookingProcessor.start();
+        System.out.println("BookingServlet initialized and BookingProcessor started");
+    }
+
+    @Override
+    public void destroy() {
+        // Stop the booking processor when the servlet is destroyed
+        if (bookingProcessor != null && bookingProcessor.isRunning()) {
+            bookingProcessor.stop();
+            System.out.println("BookingProcessor stopped");
+        }
+        super.destroy();
+    }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -271,6 +300,11 @@ public class BookingServlet extends HttpServlet {
             }
         }
 
+        // Instead of saving directly to file, enqueue the booking request
+        enqueueBookingRequest(booking, foodItems, totalPrice);
+
+        // For backward compatibility, also save to file directly
+        // This can be removed once the queue processing is fully tested
         saveBookingToFile(booking, foodItems, totalPrice);
 
         String receiptContent = generateReceiptContent(booking, foodItems, totalPrice);
@@ -370,6 +404,40 @@ public class BookingServlet extends HttpServlet {
         receipt.append("Total Price: $").append(totalPrice).append("\n");
         receipt.append("Thank you for booking! Please pay at the theater.\n");
         return receipt.toString();
+    }
+
+    /**
+     * Enqueue a booking request to be processed asynchronously
+     * @param pendingBooking The pending booking to be processed
+     * @param foodItems Food items selected by the user
+     * @param totalPrice Total price of the booking
+     * @return true if the booking was successfully enqueued, false otherwise
+     */
+    private boolean enqueueBookingRequest(PendingBooking pendingBooking, String[] foodItems, double totalPrice) {
+        try {
+            // Create a new Booking object from the PendingBooking
+            Booking booking = new Booking();
+            booking.setBookingId(pendingBooking.getBookingId());
+            booking.setUserId("user123"); // This should be the actual user ID from the session
+            booking.setShowtimeId(pendingBooking.getShowtime()); // Using showtime as showtimeId for simplicity
+            booking.setSeatId(String.join(",", pendingBooking.getSelectedSeats())); // Using joined seats as seatId
+            booking.setBookingDate(pendingBooking.getShowDate());
+            booking.setPaid(false); // Default to unpaid
+
+            // Enqueue the booking
+            boolean enqueued = bookingQueue.enqueueBooking(booking);
+
+            if (enqueued) {
+                System.out.println("Booking enqueued successfully: " + booking.getBookingId());
+            } else {
+                System.out.println("Failed to enqueue booking: " + booking.getBookingId());
+            }
+
+            return enqueued;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 
     public static class PendingBooking {
